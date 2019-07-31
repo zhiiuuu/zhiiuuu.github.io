@@ -12,7 +12,7 @@ tags:-webkit CSS
 |       属性       |      描述      |
 | :--------------: | :------------: |
 | text-size-adjust | 文本字体的调整 |
-|   border-image   |                |
+|   border-image   |    图片边框    |
 |                  |                |
 
 - text-size-adjust
