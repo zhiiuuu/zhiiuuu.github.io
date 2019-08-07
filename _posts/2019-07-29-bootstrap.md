@@ -9,6 +9,26 @@ tags: bootstrap
 
 # bootstrap
 
+|          class           |                描述                |
+| :----------------------: | :--------------------------------: |
+|      img-responsive      |             响应式图像             |
+|           lead           |      更大更粗/行高更高的文本       |
+|       text-center        |              文本居中              |
+|        pull-right        |               右浮动               |
+|       list-inline        |        把所有列表放在同一行        |
+|      dl-horizontal       |           dt dd在同一行            |
+|       text-justify       |   段落中超出屏幕部分文字自动换行   |
+| text-lowercase/uppercase |           设定文本大小写           |
+|        form-group        |            获取最佳间距            |
+|         sr-only          |       可以隐藏内联表单的标签       |
+|     form-horizontal      |              水平表单              |
+|   form-control-static    | 水平表单内的表单标签后放置纯文本时 |
+|       img-rounded        |            图片圆角6px             |
+|        img-circle        |            图片变成圆形            |
+|      img-thumbnail       |   添加一些内边距和一个灰色的边框   |
+
+
+
 #### HTML5文档类型
 
 bootstrap使用到的某些HTML元素和CSS属性需要将页面设置为HTML5文档类型
