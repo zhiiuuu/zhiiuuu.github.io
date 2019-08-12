@@ -49,6 +49,26 @@ tags: JavaScript
   - 创建变量对象(函数的形参/函数声明/变量声明)
   - 求this的值
 
+#### instanceof
+
+```
+语法:object instanceof constructor
+
+注意左侧必须是对象（object），如果不是，直接返回false，具体见基础类型。
+
+基础类型
+
+let num = 1
+
+num instanceof Number // false
+
+num = new Number(1)
+
+num instanceof Number // true
+
+明明都是num，而且都是1，只是因为第一个不是对象，是基本类型，所以直接返回false，而第二个是封装成对象，所以true。
+```
+
 
 
 
