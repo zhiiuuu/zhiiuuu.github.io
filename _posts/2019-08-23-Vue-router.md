@@ -33,21 +33,42 @@ tags: Vue
 
 首先，第一步，必须要引入Vue以及Vue-Router模块，并且要调用一次use函数，并且把Router以参数的形式传入
 
-![img](file:///C:\Users\ADMINI~1\AppData\Local\Temp\ksohtml9700\wps3.jpg) 
+```
+import Vue from 'vue'
+import Router from 'vue-router'
+
+Vue.use(Router) 
+```
 
 然后需要配置路由，配置路由需要定义一个route或者routes，并且有两个属性，第一个属性是path，第二个属性是component。
 
-Path指的是路径比如，规定www.abcd.com/about是关于页，那么/about就是我们所谓的路径。
+Path指的是路径比如，规定`www.abcd.com/about`是关于页，那么`/about`就是我们所谓的路径。
 
 Component指的是组件，比如，/about的时候需要展示about的内容，那么此时对应的component的值就是about。
 
-![img](file:///C:\Users\ADMINI~1\AppData\Local\Temp\ksohtml9700\wps4.jpg) 
+```
+const routes = [
+    {
+        path:'/home',
+        component:home,
+    },
+    {
+        path:'/about',
+        component:about
+    }
+] 
+```
 
 (3) 最后需要对创建的路由进行管理
 
 需要将定义好的routes传递给VueRouter对象
 
-​    ![img](file:///C:\Users\ADMINI~1\AppData\Local\Temp\ksohtml9700\wps5.jpg)
+```
+var router = new router({router})
+
+//向外抛出模块
+export default router;
+```
 
 (4) 重定向
 
