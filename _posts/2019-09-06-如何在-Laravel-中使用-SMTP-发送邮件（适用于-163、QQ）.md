@@ -18,7 +18,7 @@ Laravel 4 和 Laravel 5 的邮件发送使用方式完全一致。Laravel 5 的�
 
 ## 163邮箱的配置
 
-修改邮件发送配置。4.2 在 app/config/mail.php，5 在 config/mail.php，修改以下配置：
+修改邮件发送配置。修改以下配置：
 
 ### 1.163邮箱的配置项.env (就在主目录下)
 
@@ -34,9 +34,9 @@ MAIL_ENCRYPTION=
 > 关于MAIL_PASSWORD配置项的说明
 > 此项并不是作为发送邮件的代理邮箱的登录密码（也就是不是你邮箱的密码），而是开通smtp设置的授权码
 
-![](https://zhiiuuu.oss-cn-shanghai.aliyuncs.com/2019-09-07_095001.png?Expires=1567824737&OSSAccessKeyId=TMP.hVUtYw4bFk2s7D7jQBjjz7LtPEyoLkTjZwDk6VEdCtB4TQ1DjNxYHh5nVD18Dau5FT5yQXKRF4E1kdVPMyHf8Tt3h4J7cqctUkaA23LshvFV2AqaYdWT6kMHPaFGzV.tmp&Signature=rDkNVbQVGafCf65JPeF9b%2FeCJco%3D)
+![112](http://px6xvo4m7.bkt.clouddn.com/2019-09-07_095001.png)
 
-## ![](https://zhiiuuu.oss-cn-shanghai.aliyuncs.com/2019-09-07_095049.png?Expires=1567824772&OSSAccessKeyId=TMP.hVUtYw4bFk2s7D7jQBjjz7LtPEyoLkTjZwDk6VEdCtB4TQ1DjNxYHh5nVD18Dau5FT5yQXKRF4E1kdVPMyHf8Tt3h4J7cqctUkaA23LshvFV2AqaYdWT6kMHPaFGzV.tmp&Signature=GZphem6NHtsLqA1gU0Vg7NhrvGU%3D)
+## ![111](https://zhiiuuu.oss-cn-shanghai.aliyuncs.com/2019-09-07_095049.png?Expires=1567824772&OSSAccessKeyId=TMP.hVUtYw4bFk2s7D7jQBjjz7LtPEyoLkTjZwDk6VEdCtB4TQ1DjNxYHh5nVD18Dau5FT5yQXKRF4E1kdVPMyHf8Tt3h4J7cqctUkaA23LshvFV2AqaYdWT6kMHPaFGzV.tmp&Signature=GZphem6NHtsLqA1gU0Vg7NhrvGU%3D)
 
 ### 2.但是我们注意一下config/mail.php中有两项
 
@@ -75,7 +75,15 @@ email.active就是页面模板
 
 
 ```
-$data = ['email'=>$email, 'name'=>$name, 'uid'=>$uid, 'activationcode'=>$code];Mail::send('activemail', $data, function($message) use($data){    $message->to($data['email'], $data['name'])->subject('欢迎注册我们的网站，请激活您的账号！');});
+$data = [
+'email'=>$email, 
+'name'=>$name,
+'uid'=>$uid,
+'activationcode'=>$code
+];
+Mail::send('activemail', $data, function($message) use($data){    
+	$message->to($data['email'], $data['name'])->subject('欢迎注册我们的网站，请激活您的账号！');
+});
 ```
 
 邮件视图为 views/activemail.blade.php：
@@ -83,5 +91,12 @@ $data = ['email'=>$email, 'name'=>$name, 'uid'=>$uid, 'activationcode'=>$code];M
 
 
 ```
-<!doctype html><html lang="zh-CN">  <head>    <meta charset="UTF-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">  </head><body>  <a href="{{ URL('active?uid='.$uid.'&activationcode='.$activationcode) }}" target="_blank">点击激活你的账号</a></body></html>
+<!doctype html><html lang="zh-CN">  
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head><body>
+<a href="{{ URL('active?uid='.$uid.'&activationcode='.$activationcode) }}" target="_blank">点击激活你的账号</a>
+</body>
+</html>
 ```
