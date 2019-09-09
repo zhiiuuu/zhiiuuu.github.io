@@ -36,7 +36,7 @@ MAIL_ENCRYPTION=
 
 ![112](http://px6xvo4m7.bkt.clouddn.com/2019-09-07_095001.png)
 
-## ![111](https://zhiiuuu.oss-cn-shanghai.aliyuncs.com/2019-09-07_095049.png?Expires=1567824772&OSSAccessKeyId=TMP.hVUtYw4bFk2s7D7jQBjjz7LtPEyoLkTjZwDk6VEdCtB4TQ1DjNxYHh5nVD18Dau5FT5yQXKRF4E1kdVPMyHf8Tt3h4J7cqctUkaA23LshvFV2AqaYdWT6kMHPaFGzV.tmp&Signature=GZphem6NHtsLqA1gU0Vg7NhrvGU%3D)
+## ![2](http://px6xvo4m7.bkt.clouddn.com/2019-09-07_095049.png)
 
 ### 2.但是我们注意一下config/mail.php中有两项
 
@@ -49,13 +49,13 @@ MAIL_ENCRYPTION=
 
 这里的MAIL_FROM_ADDRESS,MAIL_FROM_NAME在配置文件中是没有的。所以我们应该加到.env中
 
-![](https://zhiiuuu.oss-cn-shanghai.aliyuncs.com/2019-09-07_095550.png?Expires=1567824931&OSSAccessKeyId=TMP.hVUtYw4bFk2s7D7jQBjjz7LtPEyoLkTjZwDk6VEdCtB4TQ1DjNxYHh5nVD18Dau5FT5yQXKRF4E1kdVPMyHf8Tt3h4J7cqctUkaA23LshvFV2AqaYdWT6kMHPaFGzV.tmp&Signature=lmSoj7BLNU5lb2xJzIe%2Bku8ANJs%3D)
+![3](http://px6xvo4m7.bkt.clouddn.com/2019-09-07_095550.png)
 
 ### 3.控制器写法
 
 email.active就是页面模板
 
-![](https://zhiiuuu.oss-cn-shanghai.aliyuncs.com/markdown/2019-09-07_104313.png?Expires=1567827800&OSSAccessKeyId=TMP.hVUtYw4bFk2s7D7jQBjjz7LtPEyoLkTjZwDk6VEdCtB4TQ1DjNxYHh5nVD18Dau5FT5yQXKRF4E1kdVPMyHf8Tt3h4J7cqctUkaA23LshvFV2AqaYdWT6kMHPaFGzV.tmp&Signature=xssS5iMrSD96b%2B%2Bj3kerCDfNnyE%3D)
+![4](http://px6xvo4m7.bkt.clouddn.com/2019-09-07_104313.png)
 
 ## qq邮箱的配置项
 
