@@ -360,10 +360,12 @@ tags: JavaScript
         setTimeout(() => reject(new Error('fail')), 1000)//reject执行失败
     })
     
-    Promise.all([p1, p2]).then(result => {			//promise.all()会等两个函数 都返回 且都是成功的才会执行
+    Promise.all([p1, p2]).then(result => {			
+    //promise.all()会等两个函数 都返回 且都是成功的才会执行
         console.log(result[0])
         console.log(result[1])
-    }).catch(error => console.log(error.message))//其中有一个失败了 所以执行catch 且只会执行一次catch
+    }).catch(error => console.log(error.message))
+    //其中有一个失败了 所以执行catch 且只会执行一次catch
     
     A. data1 fail
     B. fail data1
