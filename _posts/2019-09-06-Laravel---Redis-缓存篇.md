@@ -63,7 +63,9 @@ Redis 是一款开源且先进的键值对数据库。由于它可用的键包�
 
 **运行代码时 请确保你环境中的redis服务是开启的**
 
+windows
 
+`redis-server.exe redis.windows.conf`
 
 
 
@@ -548,7 +550,7 @@ class PhotoController extends Controller
         }
         return $array;
     }
-    ```
+```
     * 不管我把redis的key手动删除还是redis的key存在 我们输出的都是这个(这是我的浏览器插件json-handle的效果)
     * 删除redis的key 效果依旧
 那么肯定有人又要问了 你这只是在读数据库 如果我增 删 改 后 redis不同步了哇
@@ -584,3 +586,4 @@ restfulApi 添加方法
 
 > 参考 redis中文官网 <http://www.redis.cn/>
 > 参考 易百教程 <http://www.yiibai.com/redis/redis_environment.html>
+```
